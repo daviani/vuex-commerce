@@ -20,6 +20,11 @@ const routes = [
         name: 'Admin',
         component: () => import(/* webpackChunkName: "about" */ '../views/Admin/Products.vue'),
     },
+    {
+        path: '/admin/product-add',
+        name: 'product-add',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Admin/ProductsAdd.vue'),
+    },
 ];
 
 const router = new VueRouter({

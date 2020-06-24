@@ -1,5 +1,6 @@
 <template >
-	<div class="contact container" >
+	<div class="products container" >
+			<router-link to="/admin/product-add">Add new reference</router-link>
 		<ProductList />
 	</div >
 </template >

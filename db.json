@@ -1,5 +1,6 @@
 {
-  "products": [{
+  "products": [
+    {
       "id": 9780596806750,
       "title": "JavaScript Patterns: Build Better Applications with Coding and Design Patterns",
       "author": {
@@ -10,7 +11,8 @@
       "year": 2010,
       "price": 29.99,
       "image": "https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SL200_.jpg"
-    }, {
+    },
+    {
       "id": 9780596517748,
       "title": "JavaScript: The Good Parts",
       "author": {
@@ -73,7 +75,8 @@
     {
       "id": 9780132350884,
       "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
-      "author": [{
+      "author": [
+        {
           "lastName": "Gamma",
           "firstName": "Erich "
         },

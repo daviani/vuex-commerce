@@ -92,7 +92,7 @@
             return {
                 book: {
                     title: '',
-	                id:'',
+                    id: '',
                     author: {
                         firstName: '',
                         lastName: '',
@@ -105,9 +105,9 @@
             };
         },
         methods: {
-            created() {
-                console.log(this.book)
-	            this.$store.dispatch("createProduct", this.book);
+            create() {
+                console.log(this.book);
+                this.$store.dispatch('createProduct', this.book);
             },
         },
     };

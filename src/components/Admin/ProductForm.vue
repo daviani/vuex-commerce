@@ -95,24 +95,20 @@
                     id: '',
                     author: {
                         firstName: '',
-                        lastName: '',
+                        lastName: ''
                     },
                     publisher: '',
                     year: '',
                     price: '',
-                    image: '',
-                },
-            };
+                    image: ''
+                }
+            }
         },
         methods: {
             create() {
-                console.log(this.book);
-                this.$store.dispatch('createProduct', this.book);
-            },
-        },
-    };
+                console.log(this.book)
+                this.$store.dispatch('createProduct', this.book)
+            }
+        }
+    }
 </script >
-
-<style scoped >
-
-</style >

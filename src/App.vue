@@ -1,27 +1,39 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/contact">Contact</router-link> |
-      <router-link to="/admin">Admin</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
+<template >
+	<div id="app" >
+		<div id="nav" >
+      <span class="m-10 " >
+             <router-link to="/" >Home</router-link >
+      </span >
+			<span class="m-10 main-color" >||</span >
+			<span class="m-10 " >
+              <router-link to="/contact" >Contact</router-link >
+      </span >
+			<span class="m-10 main-color " >||</span >
+			<span class="m-10 " >
+             <router-link to="/admin" >Admin</router-link >
+      </span >
+			<span class="float-right main-color" >
+		<strong >	Cart (0)</strong >
+			</span >
+		</div >
+		<router-view />
+	</div >
+</template >
 
-<style>
+<style >
+	.main-color {
+		color : #42B983;
+		}
 
+	#nav {
+		padding : 30px;
+		}
 
-#nav {
-  padding: 30px;
-}
+	#nav a {
+		color : #42B983;
+		}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a {
-  color: #42b983;
-}
-</style>
+	.m-10 {
+		margin : 10px;
+		}
+</style >

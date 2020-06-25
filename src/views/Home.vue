@@ -1,23 +1,30 @@
-<template>
-  <div class="home">
-    <h1 class="display-1">BooKShop</h1>
-    <hr >
-  </div>
-</template>
+<template >
+	<div class="home" >
+		<h1 class="display-1" >BooKShop</h1 >
+		<hr >
+		<Products />
+	</div >
+</template >
 
-<script>
-export default {
-  name: 'Home',
-}
-</script>
+<script >
+    import Products from './Products'
 
-<style scoped>
-  h1 {
-    text-align: center;
-    color: #42b983;
-    font-weight: bolder;
-  }
-  hr {
-    background-color: #42b983;
-  }
+    export default {
+        name      : 'Home',
+        components: {
+            Products
+        }
+    }
+</script >
+
+<style scoped >
+	h1 {
+		color       : #42B983;
+		font-weight : bolder;
+		text-align  : center;
+		}
+
+	hr {
+		background-color : #42B983;
+		}
 </style >

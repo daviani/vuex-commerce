@@ -37,16 +37,12 @@
     export default {
         name: 'Products',
         created() {
-            this.$store.dispatch("getProducts");
+            this.$store.dispatch('getProducts')
         },
         computed: {
             products() {
-                return this.$store.state.products;
+                return this.$store.state.products
             }
-        },
-    };
+        }
+    }
 </script >
-
-<style scoped >
-
-</style >

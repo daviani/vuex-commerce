@@ -1,21 +1,17 @@
-<template>
-	<div class="container">
-		<h3>Create a new book</h3>
+<template >
+	<div class="container" >
+		<h3 >Create a new book</h3 >
 		<ProductForm />
-	</div>
-</template>
+	</div >
+</template >
 
 <script >
-    import ProductForm from '../../components/Admin/ProductForm';
+    import ProductForm from '../../components/Admin/ProductForm'
 
     export default {
         name: 'ProductsAdd',
         components: {
-            ProductForm,
-        },
-    };
+            ProductForm
+        }
+    }
 </script >
-
-<style scoped >
-
-</style >

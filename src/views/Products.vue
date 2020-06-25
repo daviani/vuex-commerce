@@ -34,7 +34,7 @@
         },
         methods : {
             addToCart(product) {
-                this.$store.dispatch('addToCart', product)
+                this.$store.dispatch('updateCart', product)
                 .then(() => {
                     console.log(this.$store.state.products)
                 })

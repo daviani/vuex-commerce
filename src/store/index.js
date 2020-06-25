@@ -25,8 +25,8 @@ export default new Vuex.Store({
             //        state.errors = [error, ...state.errors]
             errors = [error, ...errors]
         },
-        ADD_TO_CART(state, product) {
-            state.cart = [product, ...state.cart]
+        UPDATE_CART(state, cart) {
+            state.cart = cart
         }
     },
     actions  : {
@@ -56,13 +56,19 @@ export default new Vuex.Store({
                     'GET_PRODUCT_ERROR', product)
             })
         },
-        addToCart({commit}, product) {
+        updateCart({commit}, product) {
             productService
             .addToCart(product)
             .then(() => {
-                commit('ADD_TO_CART', product)
+                commit('UPDATE_CART',
+                    JSON.parse(localStorage.getItem('vuex-commerce-cart')))
             }).catch(err =>
                 console.error(err))
+        }
+    },
+    getters  : {
+        getCart(state) {
+            return state.cart
         }
     },
     modules  : {}

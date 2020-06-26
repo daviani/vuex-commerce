@@ -69,6 +69,15 @@ export default new Vuex.Store({
     getters  : {
         getCart(state) {
             return state.cart
+        },
+        getNumberArticlesinCart(state) {
+            if (!state.cart.products) return 0
+            //Calcule le total d'article dans le caddie grâce à reduce
+            const numberArticles = state.cart.products.reduce(
+                (acc, current) => {
+                    return acc + current.quantity
+                }, 0)
+            return numberArticles
         }
     },
     modules  : {}

@@ -12,7 +12,9 @@
             </span >
 			<span class="float-right main-color" >
 				<router-link to="/cart" >
-					<strong >	Cart ( {{cart.length}} )</strong >
+				<i class="fas fa-shopping-bag">
+					<strong >	Cart ( {{NumberArticlesinCart}} )</strong >
+				</i>
 				</router-link >
 
 			</span >
@@ -24,9 +26,9 @@
 
 <script >
     export default {
-        computed: {
-            cart() {
-                return this.$store.state.cart
+        computed:  {
+            NumberArticlesinCart() {
+                return this.$store.getters.getNumberArticlesinCart
             }
         }
     }

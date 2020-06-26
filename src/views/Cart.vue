@@ -7,7 +7,19 @@
 				<div :key="product.id" v-for="product in cart.products" >
 					<ul >
 						<li >
-							{{product.quantity}} || {{product.title}} || {{product.price}} €
+							<span class="quantity" >
+							<i @click="decrementQuantity(product)"
+						        class="fa fa-lg fa-minus-circle" >
+							</i >
+								{{product.quantity}}
+								<i @click="incrementQuantity(product)"
+								   class="fa fa-lg fa-plus-circle" >
+							</i >
+							</span >
+							<span class="product" >
+								{{product.title}} || {{product.price}} €
+							</span >
+							<hr class="mb-2" >
 						</li >
 					</ul >
 				</div >
@@ -23,10 +35,38 @@
             cart() {
                 return this.$store.state.cart
             }
+        },
+        methods : {
+            incrementQuantity(product) {
+                this.$store.dispatch('updateCart', product)
+            },
+            decrementQuantity(product) {
+                this.$store.dispatch('removeOneFromCart', product)
+            }
         }
+
     }
 </script >
 
 <style scoped >
+	.quantity {
+		font-size   : 17px;
+		font-weight : bold;
+		margin      : 3px;
+		padding     : 3px;
+		}
 
+	.product {
+		height : 89px;
+		margin : 25px;
+		width  : 80%;
+		}
+
+	li {
+		list-style : none;
+		}
+
+	i {
+		color : #42B983;
+		}
 </style >

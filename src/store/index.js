@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import productService from '../services/ProductService'
+import productService from '../services/ProductService2'
 
 Vue.use(Vuex)
 
@@ -26,6 +26,9 @@ export default new Vuex.Store({
             errors = [error, ...errors]
         },
         UPDATE_CART(state, cart) {
+            state.cart = cart
+        },
+        REMOVE_ONE_FROM_CART(state, cart) {
             state.cart = cart
         }
     },
@@ -63,6 +66,18 @@ export default new Vuex.Store({
                 commit('UPDATE_CART',
                     JSON.parse(localStorage.getItem('vuex-commerce-cart')))
             }).catch(err =>
+                console.error(err))
+        },
+        removeOneFromCart({commit}, product) {
+            return productService
+            .removeOneFromCart(product)
+            .then(() => {
+                commit('REMOVE_ONE_FROM_CART',
+                    JSON.parse(localStorage
+                        .getItem('vuex-commerce-cart')
+                    ))
+            })
+            .catch(err =>
                 console.error(err))
         }
     },
